@@ -26,6 +26,9 @@ TARGET_KERNEL_SOURCE := kernel/amazon/bowser-common
 TARGET_KERNEL_CONFIG := tate_android_defconfig
 BOARD_KERNEL_CMDLINE := mem=1G console=/dev/null rootdelay=2 init=/init androidboot.console=ttyO2 androidboot.hardware=bowser androidboot.selinux=permissive
 
+# linaro
+TARGET_KERNEL_CUSTOM_LINARO_TOOLCHAIN := linaro-4.7-13.04/bin/arm-linux-gnueabihf-
+
 # External SGX Module
 SGX_MODULES:
 	make clean -C $(COMMON_FOLDER)/pvr-source/eurasiacon/build/linux2/omap4430_android
