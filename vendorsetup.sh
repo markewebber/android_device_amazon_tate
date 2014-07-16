@@ -13,4 +13,6 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
-add_lunch_combo schism_tate-userdebug
+
+add_lunch_combo full_tate-eng
+add_lunch_combo cm_tate-userdebug
