@@ -13,16 +13,20 @@
 # limitations under the License.
 
 # Inherit some common CM stuff.
-$(call inherit-product, vendor/cm/config/common_full_tablet_wifionly.mk)
+$(call inherit-product, vendor/schism/config/common_full_tablet_wifionly.mk)
+$(call inherit-product, vendor/schism/configs/common.mk)
 
 # Inherit device configuration for bowser
 $(call inherit-product, device/amazon/tate/full_tate.mk)
-$(call inherit-product, device/amazon/bowser-common/cm.mk)
+$(call inherit-product, device/amazon/bowser-common/schism.mk)
 
-#TARGET_SCREEN_WIDTH := 1280
+# TARGET_SCREEN_WIDTH := 1280
 TARGET_SCREEN_WIDTH := 480
 TARGET_SCREEN_HEIGHT := 800
 
-PRODUCT_NAME := cm_tate
+PRODUCT_NAME := schism_tate
 PRODUCT_RELEASE_NAME := KindleFireHD
 
+# Copy device specific prebuilt files.
+PRODUCT_COPY_FILES += \
+    vendor/schism/prebuilt/bootanimations/BOOTANIMATION-1280x800.zip:system/media/bootanimation.zip
